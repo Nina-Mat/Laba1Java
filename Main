@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Main myApp = new Main();
+        myApp.rest();
+    }
+    public void rest() {
+        Interface Restaurant = new Restaurant();
+        Interface Dish = new Interface() {
+
+            String secondword = "блюда";
+            public void naming(String fraza) {
+                secondword = fraza;
+                System.out.println("Теперь вы смотрите " + secondword);
+            }
+
+            public void showinfo() {
+
+                naming("блюда");
+
+                Scanner scan = new Scanner(System.in);
+
+                System.out.print("Название: ");
+                String name = scan.nextLine();
+
+                System.out.print("Калорийность: ");
+                String kkal = scan.nextLine();
+
+                System.out.print("Вес: ");
+                String ves = scan.nextLine();
+
+                System.out.print("Стоимость: ");
+                String money = scan.nextLine();
+
+                System.out.printf("---Просмотр данных---\n"
+                                + "Название: %s\n"
+                                + " Калорийность: %s\n"
+                                + " Вес: %s\n"
+                                + " Стоимость: %s\n",
+                        name, kkal, ves, money);
+                scan.close();
+            }
+        };
+
+        Restaurant.showinfo();
+        System.out.println("---------------------------------");
+        Dish.showinfo();
+    }
+}
