@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Restaurant implements Interface {
+
+    String firstword = "Ресторан";
+    public void naming(String fraza) {
+        firstword = fraza;
+        System.out.println("Данные: " + firstword);
+    }
+
+    public void showinfo() {
+
+        naming("рестораны");
+
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Название: ");
+        String name = in.nextLine();
+
+        System.out.print("Адрес: ");
+        String adress = in.nextLine();
+
+        System.out.print("Телефон: ");
+        String phone = in.nextLine();
+
+        System.out.printf("---Просмотр данных---\n"
+                        + "Название: %s\n"
+                        + " Адрес: %s\n"
+                        + " Телефон: %s\n",
+                name, adress, phone);
+    }
+}
