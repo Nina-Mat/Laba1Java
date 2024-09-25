@@ -1,0 +1,4 @@
+public interface Interface {
+    public void showinfo();
+    public void naming(String fraza);
+}
